@@ -8,6 +8,6 @@ import lombok.Getter;
 @Getter
 @EqualsAndHashCode
 public class Scent {
-    private final Cardinal cardinal;
-    private final Direction direction;
+  private final Orientation orientation;
+  private final Direction direction;
 }
