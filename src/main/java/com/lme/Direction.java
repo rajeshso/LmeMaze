@@ -1,5 +1,6 @@
 package com.lme;
 
+import java.util.Arrays;
 import lombok.Getter;
 
 @Getter
@@ -17,12 +18,8 @@ public enum Direction {
   }
 
   public static Direction id(Character id) {
-    for (Direction e : values()) {
-      if (e.id == id) {
-        return e;
-      }
-    }
-    return null;
+    //Default is Forward
+    return Arrays.stream(values()).filter( v -> v.id == id).findAny().orElse(FORWARD);
   }
 
 }

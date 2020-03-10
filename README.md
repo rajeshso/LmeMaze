@@ -13,6 +13,11 @@ The input is not taken as multiple lines on the Command line. The input is used 
 
 The orientation of the Robot determines the direction from the point of view of the Robot. Hence, a Left from North is a different coordinate than a Left from South. Hence, the sample input data provided with the question resulted in a answer from the POV of Robot.
 
+The compelling reason to take this deviation is because of the requirement of Scent.
+
+Let us take an example of Coordinate 0,0. This has four orientations - Of which, a Robot on Forward for two directions will release Scent and two other directions is still valid. 
+A subsequent robot which intends to take a valid direction should be permitted to do so. Hence, the deviation on the requirement had to be taken.
+
 ### Pre-requisites for running the program
 
 A Gradle 5.2.1 and Java 11 should be sufficient.

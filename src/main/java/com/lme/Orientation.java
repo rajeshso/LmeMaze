@@ -1,5 +1,6 @@
 package com.lme;
 
+import java.util.Arrays;
 import lombok.Getter;
 
 @Getter
@@ -15,12 +16,8 @@ public enum Orientation {
     this.id = id;
   }
 
+  //Default is North
   public static Orientation id(Character id) {
-    for (Orientation e : values()) {
-      if (e.id == id) {
-        return e;
-      }
-    }
-    return null;
+    return Arrays.stream(values()).filter(v -> v.id == id).findAny().orElse(NORTH);
   }
 }
